@@ -72,7 +72,7 @@ class MainActivity : ComponentActivity() {
     private fun addToHistory(input: String, result: Double) {
         index ++
         val formattedResult = DecimalFormat("0.00").format(result)
-        val historyItem = "$index) $formattedResult meters"
+        val historyItem = "$formattedResult meters"
         historyItems.add(0, historyItem)
         //notify the adapter that the data set has changed
         (historyList.adapter as ArrayAdapter<*>).notifyDataSetChanged()
